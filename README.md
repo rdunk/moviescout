@@ -1,4 +1,11 @@
-# scouts-rdunk
+# MovieScout
+
+## About
+
+MovieScout is a technical demonstration.
+* Built using Vue.js, Vuex and Vue Router.
+* Scaffolded with Vue CLI 3.
+* Styled with Bootstrap 4, SCSS and CSS Modules.
 
 ## Project setup
 ```
@@ -15,15 +22,8 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
+## Deployment
+To deploy to [Zeit Now](http://now.sh/):
 ```
-npm run test
+npm run deploy
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

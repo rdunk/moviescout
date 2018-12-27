@@ -5,13 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>scouts-rdunk</title>
+    <title>MovieScout</title>
+    <style>
+    .pre-loading {
+      margin-top: 2em;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    }
+    .pre-loading-text {
+      margin-top: 1em;
+    }
+    .pre-loading-ring {
+      display: inline-block;
+      position: relative;
+      width: 2.5em;
+      height: 2.5em;
+    }
+    .pre-loading-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 2.5em;
+      height: 2.5em;
+      border: 0.25em solid #7413dc;
+      border-radius: 50%;
+      animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #7413dc transparent transparent transparent;
+    }
+    .pre-loading-ring div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    .pre-loading-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    .pre-loading-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+    @keyframes loading-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    </style>
   </head>
-  <body>
+  <body class="bg-light">
     <noscript>
-      <strong>We're sorry but scouts-rdunk doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but MovieScout doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app" aria-busy="true">
+      <div class="pre-loading">
+        <div class="pre-loading-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="pre-loading-text">
+          Loading MovieScout...
+        </div>
+      </div>
+    </div>
   </body>
 </html>
